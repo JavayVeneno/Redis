@@ -25,8 +25,12 @@ public class HyperLogLog {
 
         jedis.pfadd("404","老刘","张海军");
         jedis.pfadd("403","王波");
+
+
+
         // 讲访问403页面的用户数量合并到404中
         System.out.println(jedis.pfmerge("404", "403"));
+
 
     }
 }
